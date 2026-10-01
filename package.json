@@ -1,0 +1,32 @@
+{
+  "name": "cbsm-sistema-requerimento",
+  "version": "1.0.0",
+  "description": "Sistema de Requerimento de Recursos e Materiais - Construtora BSM (CBSM)",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "start:clean": "node server/cleanServer.js",
+    "server": "node server/server.js",
+    "server:clean": "node server/cleanServer.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client install && npm --prefix client run build"
+  },
+  "keywords": [
+    "construtora",
+    "cbsm",
+    "requerimentos",
+    "canteiro",
+    "engenharia",
+    "materiais",
+    "maquinas",
+    "obras"
+  ],
+  "author": "Construtora BSM",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}

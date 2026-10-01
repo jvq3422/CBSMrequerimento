@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "usr-eng-1790708975014",
+      "name": "joao",
+      "email": "joaovictorqdm2004@gmail.com",
+      "password": "010203jc",
+      "role": "ENGENHEIRO",
+      "assignedObraId": null,
+      "crea": "CREA-BA Registrado",
+      "phone": ""
+    }
+  ],
+  "obras": [],
+  "catalog": [],
+  "requisitions": []
+}

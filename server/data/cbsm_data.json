@@ -1,0 +1,967 @@
+{
+  "users": [
+    {
+      "id": "usr-eng-1",
+      "name": "Eng. Roberto Almeida",
+      "email": "engenheiro@cbsm.com.br",
+      "password": "123",
+      "role": "ENGENHEIRO",
+      "crea": "CREA-BA 48219/D",
+      "phone": "(71) 99871-2200",
+      "avatar": "RA",
+      "title": "Engenheiro Coordenador Geral"
+    },
+    {
+      "id": "usr-chefe-1",
+      "name": "Mestre Raimundo Nonato",
+      "email": "raimundo@cbsm.com.br",
+      "password": "123",
+      "role": "CHEFE_OBRA",
+      "registration": "MAT-0842",
+      "phone": "(71) 98765-4321",
+      "avatar": "RN",
+      "assignedObraId": "obra-amaralina",
+      "title": "Chefe de Obra Canteiro"
+    },
+    {
+      "id": "usr-chefe-2",
+      "name": "Mestre Valdir Santos",
+      "email": "valdir@cbsm.com.br",
+      "password": "123",
+      "role": "CHEFE_OBRA",
+      "registration": "MAT-1109",
+      "phone": "(71) 98112-9933",
+      "avatar": "VS",
+      "assignedObraId": "obra-trobogy",
+      "title": "Chefe de Obra Canteiro"
+    }
+  ],
+  "obras": [
+    {
+      "id": "obra-amaralina",
+      "code": "CBSM-AMA-01",
+      "name": "Requalificação da Orla de Amaralina",
+      "location": "Amaralina, Salvador - BA",
+      "type": "Requalificação Urbana",
+      "engineerInCharge": "Eng. Roberto Almeida",
+      "chiefInCharge": "Mestre Raimundo Nonato",
+      "status": "EM_ANDAMENTO",
+      "sectors": [
+        "Frente 1 - Calçadão e Ciclovia",
+        "Frente 2 - Contenção Marítima",
+        "Frente 3 - Paisagismo e Iluminação",
+        "Canteiro / Almoxarifado Central"
+      ]
+    },
+    {
+      "id": "obra-trobogy",
+      "code": "CBSM-TRB-02",
+      "name": "Macrodrenagem e Canal do Trobogy",
+      "location": "Av. Paralela / Trobogy, Salvador - BA",
+      "type": "Macrodrenagem",
+      "engineerInCharge": "Eng. Roberto Almeida",
+      "chiefInCharge": "Mestre Valdir Santos",
+      "status": "EM_ANDAMENTO",
+      "sectors": [
+        "Frente 1 - Escavação e Desassoreamento",
+        "Frente 2 - Concretagem de Galerias",
+        "Frente 3 - Drenagem Pluvial Subterrânea",
+        "Pátio de Pré-Moldados"
+      ]
+    },
+    {
+      "id": "obra-sete",
+      "code": "CBSM-SET-03",
+      "name": "Requalificação Av. Sete de Setembro",
+      "location": "Centro Histórico, Salvador - BA",
+      "type": "Estruturante / Pavimentação",
+      "engineerInCharge": "Eng. Roberto Almeida",
+      "chiefInCharge": "Mestre Raimundo Nonato",
+      "status": "EM_ANDAMENTO",
+      "sectors": [
+        "Trecho 1 - Relógio de São Pedro ao Forte",
+        "Trecho 2 - Pavimentação em Pedra Portuguesa",
+        "Trecho 3 - Dutos Subterrâneos"
+      ]
+    },
+    {
+      "id": "obra-villazure",
+      "code": "CBSM-VIL-04",
+      "name": "Condomínio Residencial Villazure",
+      "location": "Piatã, Salvador - BA",
+      "type": "Edificações",
+      "engineerInCharge": "Eng. Roberto Almeida",
+      "chiefInCharge": "Mestre Raimundo Nonato",
+      "status": "EM_ANDAMENTO",
+      "sectors": [
+        "Torre A - Alvenaria e Estrutura",
+        "Torre B - Acabamento e Revestimento",
+        "Área de Lazer e Garagens"
+      ]
+    }
+  ],
+  "catalog": [
+    {
+      "id": "mat-01",
+      "category": "MATERIAL",
+      "code": "MAT-CIM-01",
+      "name": "Cimento Portland CP-II F-32",
+      "spec": "Saco de 50 kg - Marca Mizu / Votoran",
+      "unit": "sacos",
+      "stock": 850,
+      "minQty": 5,
+      "presets": [
+        10,
+        25,
+        50,
+        100,
+        200
+      ],
+      "icon": "Package",
+      "categoryLabel": "Materiais Básicos",
+      "description": "Cimento estrutural para concreto armado, argamassa e alvenaria estrutural."
+    },
+    {
+      "id": "mat-02",
+      "category": "MATERIAL",
+      "code": "MAT-ARE-02",
+      "name": "Areia Média Lavada de Rio",
+      "spec": "Carga a granel (m³)",
+      "unit": "m³",
+      "stock": 120,
+      "minQty": 1,
+      "presets": [
+        3,
+        6,
+        12,
+        18
+      ],
+      "icon": "Boxes",
+      "categoryLabel": "Agregados",
+      "description": "Areia limpa isenta de impurezas orgânicas para reboco e concreto."
+    },
+    {
+      "id": "mat-03",
+      "category": "MATERIAL",
+      "code": "MAT-BRI-03",
+      "name": "Brita Graduada nº 1 (Gnaisse)",
+      "spec": "Carga a granel (m³)",
+      "unit": "m³",
+      "stock": 95,
+      "minQty": 1,
+      "presets": [
+        3,
+        6,
+        12,
+        18
+      ],
+      "icon": "Boxes",
+      "categoryLabel": "Agregados",
+      "description": "Brita 1 para confecção de lajes, vigas e sapatas."
+    },
+    {
+      "id": "mat-04",
+      "category": "MATERIAL",
+      "code": "MAT-ACO-04",
+      "name": "Aço CA-50 Barra 10mm (3/8\")",
+      "spec": "Barra com 12 metros - Gerdau",
+      "unit": "barras",
+      "stock": 420,
+      "minQty": 10,
+      "presets": [
+        20,
+        50,
+        100,
+        200
+      ],
+      "icon": "Layers",
+      "categoryLabel": "Ferragens e Armaduras",
+      "description": "Vergalhão de alta resistência para armaduras de pilares e vigas."
+    },
+    {
+      "id": "mat-05",
+      "category": "MATERIAL",
+      "code": "MAT-ACO-05",
+      "name": "Aço CA-50 Barra 8mm (5/16\")",
+      "spec": "Barra com 12 metros - Gerdau",
+      "unit": "barras",
+      "stock": 380,
+      "minQty": 10,
+      "presets": [
+        20,
+        50,
+        100,
+        200
+      ],
+      "icon": "Layers",
+      "categoryLabel": "Ferragens e Armaduras",
+      "description": "Vergalhão para estribos e armaduras longitudinais leves."
+    },
+    {
+      "id": "mat-06",
+      "category": "MATERIAL",
+      "code": "MAT-TIJ-06",
+      "name": "Bloco Cerâmico 8 Furos 9x19x19",
+      "spec": "Milheiro (1.000 unidades)",
+      "unit": "milheiros",
+      "stock": 28,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "icon": "BrickWall",
+      "categoryLabel": "Alvenaria",
+      "description": "Tijolo de primeira qualidade para vedação e fechamento."
+    },
+    {
+      "id": "mat-07",
+      "category": "MATERIAL",
+      "code": "MAT-CONC-07",
+      "name": "Concreto Usinado Fck 30 MPa (Slump 10±2)",
+      "spec": "Entrega em caminhão betoneira (m³)",
+      "unit": "m³",
+      "stock": 180,
+      "minQty": 4,
+      "presets": [
+        4,
+        8,
+        16,
+        24,
+        32
+      ],
+      "icon": "Truck",
+      "categoryLabel": "Concretagem",
+      "description": "Concreto pronto bombeável com laudo tecnológico de resistência."
+    },
+    {
+      "id": "mat-08",
+      "category": "MATERIAL",
+      "code": "MAT-TUB-08",
+      "name": "Tubo PVC Esgoto Série Normal 100mm",
+      "spec": "Barra rígida com 6 metros - Tigre / Amanco",
+      "unit": "barras",
+      "stock": 150,
+      "minQty": 2,
+      "presets": [
+        5,
+        10,
+        20,
+        50
+      ],
+      "icon": "Pipette",
+      "categoryLabel": "Hidráulica e Drenagem",
+      "description": "Tubulação para redes coletoras de esgoto sanitário e águas pluviais."
+    },
+    {
+      "id": "mat-09",
+      "category": "MATERIAL",
+      "code": "MAT-TIN-09",
+      "name": "Tinta Acrílica Premium Branca Fosca",
+      "spec": "Balde de 18 Litros - Suvinil / Coral",
+      "unit": "latas (18L)",
+      "stock": 64,
+      "minQty": 1,
+      "presets": [
+        2,
+        5,
+        10,
+        20
+      ],
+      "icon": "Paintbrush",
+      "categoryLabel": "Pintura e Acabamento",
+      "description": "Tinta impermeável com alta cobertura para áreas externas e internas."
+    },
+    {
+      "id": "mat-10",
+      "category": "MATERIAL",
+      "code": "MAT-ARG-10",
+      "name": "Argamassa Colante AC-III Branca",
+      "spec": "Saco de 20 kg - Fortaleza / Quartzolit",
+      "unit": "sacos",
+      "stock": 310,
+      "minQty": 5,
+      "presets": [
+        10,
+        20,
+        40,
+        80
+      ],
+      "icon": "Package",
+      "categoryLabel": "Argamassas e Revestimentos",
+      "description": "Argamassa flexível de alta aderência para porcelanatos e fachadas."
+    },
+    {
+      "id": "maq-01",
+      "category": "MAQUINARIO",
+      "code": "MAQ-RET-01",
+      "name": "Retroescavadeira JCB 3CX 4x4",
+      "spec": "Tração 4x4, caçamba dianteira 1m³, lança traseira profunda",
+      "unit": "máquinas (diárias)",
+      "stock": 4,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "icon": "Tractor",
+      "categoryLabel": "Terraplenagem",
+      "description": "Ideal para escavação de valas, abertura de canais e carga de entulho."
+    },
+    {
+      "id": "maq-02",
+      "category": "MAQUINARIO",
+      "code": "MAQ-ROL-02",
+      "name": "Rolo Compactador Vibratório Dynapac CA250",
+      "spec": "Monocilíndrico 12 Toneladas com tambor liso e patas",
+      "unit": "máquinas (diárias)",
+      "stock": 2,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "Gauge",
+      "categoryLabel": "Pavimentação",
+      "description": "Compactação pesada de subleito, base e sub-base para pavimentação asfáltica."
+    },
+    {
+      "id": "maq-03",
+      "category": "MAQUINARIO",
+      "code": "MAQ-CAM-03",
+      "name": "Caminhão Basculante Traçado 14m³ (Caçamba)",
+      "spec": "Mercedes-Benz Axor 6x4, capacidade 14m³",
+      "unit": "caminhões (diárias)",
+      "stock": 6,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "icon": "Truck",
+      "categoryLabel": "Transporte Pesado",
+      "description": "Transporte de terra, bota-fora, areia e brita no canteiro."
+    },
+    {
+      "id": "maq-04",
+      "category": "MAQUINARIO",
+      "code": "MAQ-BET-04",
+      "name": "Betoneira Elétrica 400 Litros Monofásica",
+      "spec": "Motor 2CV 220V - Marca Menegotti",
+      "unit": "unidades",
+      "stock": 8,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "RotateCw",
+      "categoryLabel": "Equipamentos de Canteiro",
+      "description": "Preparo de concreto e argamassas pontuais dentro do canteiro."
+    },
+    {
+      "id": "maq-05",
+      "category": "MAQUINARIO",
+      "code": "MAQ-BOB-05",
+      "name": "Mini Carregadeira Bobcat S570",
+      "spec": "Potência 61 HP com caçamba standard e engate rápido",
+      "unit": "máquinas (diárias)",
+      "stock": 3,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Tractor",
+      "categoryLabel": "Terraplenagem Compacta",
+      "description": "Movimentação ágil de materiais em espaços confinados e calçadões."
+    },
+    {
+      "id": "maq-06",
+      "category": "MAQUINARIO",
+      "code": "MAQ-PIP-06",
+      "name": "Caminhão Pipa 10.000 Litros com Bomba",
+      "spec": "Canhão monitor e barra espalhadora traseira",
+      "unit": "caminhões (diárias)",
+      "stock": 2,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Droplet",
+      "categoryLabel": "Apoio Operacional",
+      "description": "Umedecimento de pistas para compactação e controle de poeira ambiental."
+    },
+    {
+      "id": "maq-07",
+      "category": "MAQUINARIO",
+      "code": "MAQ-GER-07",
+      "name": "Gerador Silenciado 55 kVA Diesel",
+      "spec": "Grupo gerador Cummins 220V/380V com partida automática",
+      "unit": "unidades (diárias)",
+      "stock": 3,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Zap",
+      "categoryLabel": "Energia Temporária",
+      "description": "Fornecimento de energia contínua para maquinários em frentes sem rede pública."
+    },
+    {
+      "id": "mao-01",
+      "category": "HOMENS",
+      "code": "MAO-PED-01",
+      "name": "Pedreiro de Obras / Alvenaria",
+      "spec": "Profissional qualificado com EPIs completos",
+      "unit": "homens (diárias)",
+      "stock": 25,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "icon": "HardHat",
+      "categoryLabel": "Construção Civil",
+      "description": "Execução de alvenarias, assentamento de blocos, contrapisos e rebocos."
+    },
+    {
+      "id": "mao-02",
+      "category": "HOMENS",
+      "code": "MAO-SER-02",
+      "name": "Servente de Obras (Ajudante Geral)",
+      "spec": "Apoio a frentes de serviço e movimentação de insumos",
+      "unit": "homens (diárias)",
+      "stock": 45,
+      "minQty": 1,
+      "presets": [
+        2,
+        4,
+        8,
+        12
+      ],
+      "icon": "Users",
+      "categoryLabel": "Apoio Geral",
+      "description": "Carga, descarga, transporte manual e suporte a pedreiros e carpinteiros."
+    },
+    {
+      "id": "mao-03",
+      "category": "HOMENS",
+      "code": "MAO-ARM-03",
+      "name": "Armador de Ferragens",
+      "spec": "Corte, dobra e amarração de armaduras de aço",
+      "unit": "homens (diárias)",
+      "stock": 12,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        4
+      ],
+      "icon": "Grid",
+      "categoryLabel": "Estruturas",
+      "description": "Montagem de gaiolas de sapatas, armação de vigas e pilares estruturais."
+    },
+    {
+      "id": "mao-04",
+      "category": "HOMENS",
+      "code": "MAO-CAR-04",
+      "name": "Carpinteiro de Fôrmas e Escoramento",
+      "spec": "Montagem de caixaria de madeira e escoramento metálico",
+      "unit": "homens (diárias)",
+      "stock": 14,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        4
+      ],
+      "icon": "Hammer",
+      "categoryLabel": "Estruturas",
+      "description": "Fôrmas para concretagem de galerias, paredes de retenção e lajes."
+    },
+    {
+      "id": "mao-05",
+      "category": "HOMENS",
+      "code": "MAO-ELE-05",
+      "name": "Eletricista Instalador Industrial/Predial",
+      "spec": "Com certificação NR-10 ativa",
+      "unit": "homens (diárias)",
+      "stock": 6,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Zap",
+      "categoryLabel": "Instalações",
+      "description": "Montagem de quadros elétricos de canteiro, iluminação pública e tubulações."
+    },
+    {
+      "id": "mao-06",
+      "category": "HOMENS",
+      "code": "MAO-ENC-06",
+      "name": "Encanador / Montador de Redes Hidráulicas",
+      "spec": "Assentamento de tubos PEAD, PVC e manilhas",
+      "unit": "homens (diárias)",
+      "stock": 8,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "Wrench",
+      "categoryLabel": "Saneamento e Drenagem",
+      "description": "Instalação de redes de drenagem, esgoto e ligação de caixas coletoras."
+    },
+    {
+      "id": "mao-07",
+      "category": "HOMENS",
+      "code": "MAO-PIN-07",
+      "name": "Pintor Profissional de Fachada e Sinalização",
+      "spec": "Pintura acrílica, epóxi e demarcação viária",
+      "unit": "homens (diárias)",
+      "stock": 10,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        4
+      ],
+      "icon": "Paintbrush",
+      "categoryLabel": "Acabamento Viário",
+      "description": "Pintura de guias, ciclovias, faixas de pedestre e fachadas prediais."
+    },
+    {
+      "id": "fer-01",
+      "category": "FERRAMENTAS",
+      "code": "FER-MAR-01",
+      "name": "Martelete Perfurador/Demolidor SDS-Max 11kg",
+      "spec": "Potência 1500W com ponteiro e talhadeira - Bosch / DeWalt",
+      "unit": "unidades",
+      "stock": 9,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "Hammer",
+      "categoryLabel": "Demolição e Perfuração",
+      "description": "Demolição rápida de concreto, vigas e perfurações para ancoragem química."
+    },
+    {
+      "id": "fer-02",
+      "category": "FERRAMENTAS",
+      "code": "FER-SAP-02",
+      "name": "Compactador de Solo a Percussão (Sapo Mecânico)",
+      "spec": "Motor 4 tempos a gasolina 4 HP - Wacker Neuson",
+      "unit": "unidades",
+      "stock": 6,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "ShieldAlert",
+      "categoryLabel": "Compactação",
+      "description": "Compactação de valas estreitas e bases de calçadas."
+    },
+    {
+      "id": "fer-03",
+      "category": "FERRAMENTAS",
+      "code": "FER-VIB-03",
+      "name": "Vibrador de Concreto Portátil c/ Mangote 35mm",
+      "spec": "Motor elétrico 220V 1500W, mangote de 5 metros",
+      "unit": "unidades",
+      "stock": 12,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "Activity",
+      "categoryLabel": "Concretagem",
+      "description": "Elimina bolhas de ar e adensa o concreto em pilares, vigas e lajes."
+    },
+    {
+      "id": "fer-04",
+      "category": "FERRAMENTAS",
+      "code": "FER-SER-04",
+      "name": "Serra Circular de Bancada 10\" p/ Madeira",
+      "spec": "Mesa metálica reforçada com guia de corte 220V",
+      "unit": "unidades",
+      "stock": 5,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Disc",
+      "categoryLabel": "Carpintaria",
+      "description": "Corte rápido e preciso de compensados resinados e tábuas para fôrmas."
+    },
+    {
+      "id": "fer-05",
+      "category": "FERRAMENTAS",
+      "code": "FER-LAS-05",
+      "name": "Nível a Laser Rotativo Autonivelante 360º",
+      "spec": "Alcance 300m com tripé de alumínio e mira com receptor",
+      "unit": "kits",
+      "stock": 4,
+      "minQty": 1,
+      "presets": [
+        1,
+        2
+      ],
+      "icon": "Crosshair",
+      "categoryLabel": "Topografia e Nivelamento",
+      "description": "Demarcação de cotas, greides de drenagem e prumo de estruturas."
+    },
+    {
+      "id": "fer-06",
+      "category": "FERRAMENTAS",
+      "code": "FER-AND-06",
+      "name": "Andaime Tubular Metálico (Módulos 1,5 x 1,5m)",
+      "spec": "Kit com 10 módulos, pisos metálicos e travas diagonais",
+      "unit": "kits de módulos",
+      "stock": 20,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "icon": "Columns",
+      "categoryLabel": "Trabalho em Altura (NR-18)",
+      "description": "Torres móveis seguras com rodízios de borracha e guarda-corpo."
+    },
+    {
+      "id": "fer-07",
+      "category": "FERRAMENTAS",
+      "code": "FER-MAN-07",
+      "name": "Kit Canteiro: Pás de Bico, Enxadas e Carrinhos de Mão",
+      "spec": "3 Pás bico nº3, 3 Enxadas 2.5 e 2 Carrinhos de chapa grossa",
+      "unit": "kits",
+      "stock": 18,
+      "minQty": 1,
+      "presets": [
+        1,
+        2,
+        3
+      ],
+      "icon": "Shovel",
+      "categoryLabel": "Ferramentas Manuais",
+      "description": "Ferramental básico essencial para início de frentes de serviço e limpeza."
+    }
+  ],
+  "requisitions": [
+    {
+      "id": "REQ-2026-0043",
+      "code": "REQ-0043",
+      "obraId": "obra-amaralina",
+      "obraName": "Requalificação da Orla de Amaralina",
+      "sector": "Frente 1 - Calçadão e Ciclovia",
+      "requestedBy": {
+        "id": "usr-chefe-1",
+        "name": "Mestre Raimundo Nonato",
+        "role": "CHEFE_OBRA",
+        "phone": "(71) 98765-4321"
+      },
+      "createdAt": "2026-09-29T02:10:21.912Z",
+      "neededByDate": "2026-09-30",
+      "priority": "URGENTE",
+      "status": "APROVADO",
+      "generalNotes": "Teste automatizado de pedido de cimento e operador.",
+      "audioNote": "",
+      "items": [
+        {
+          "itemId": "mat-01",
+          "code": "MAT-CIM-01",
+          "name": "Cimento Portland CP-II F-32",
+          "category": "MATERIAL",
+          "unit": "sacos",
+          "quantityRequested": 30,
+          "quantityApproved": 30,
+          "status": "APROVADO",
+          "itemNotes": "Portão 1"
+        },
+        {
+          "itemId": "mao-01",
+          "code": "MAO-PED-01",
+          "name": "Pedreiro de Obras / Alvenaria",
+          "category": "HOMENS",
+          "unit": "homens (diárias)",
+          "quantityRequested": 2,
+          "quantityApproved": 2,
+          "status": "APROVADO",
+          "itemNotes": "Alvenaria"
+        }
+      ],
+      "review": {
+        "reviewedBy": {
+          "id": "usr-eng-1",
+          "name": "Eng. Roberto Almeida",
+          "crea": "CREA-BA 48219/D"
+        },
+        "reviewedAt": "2026-09-29T02:10:21.927Z",
+        "decision": "APROVADO",
+        "engineerNotes": "Aprovado integralmente para saída imediata do Almoxarifado Central.",
+        "dispatchDate": "2026-09-30",
+        "warehouseSource": "Almoxarifado Central Lauro de Freitas"
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-29T02:10:21.912Z",
+          "user": "Mestre Raimundo Nonato",
+          "action": "REQUERIMENTO_CRIADO",
+          "notes": "Aberto para a obra Requalificação da Orla de Amaralina (Frente 1 - Calçadão e Ciclovia) com 2 itens."
+        },
+        {
+          "timestamp": "2026-09-29T02:10:21.927Z",
+          "user": "Eng. Roberto Almeida",
+          "action": "REQUERIMENTO_APROVADO",
+          "notes": "Aprovado integralmente para saída imediata do Almoxarifado Central."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-0038",
+      "code": "REQ-0038",
+      "obraId": "obra-amaralina",
+      "obraName": "Requalificação da Orla de Amaralina",
+      "sector": "Frente 1 - Calçadão e Ciclovia",
+      "requestedBy": {
+        "id": "usr-chefe-1",
+        "name": "Mestre Raimundo Nonato",
+        "role": "CHEFE_OBRA",
+        "phone": "(71) 98765-4321"
+      },
+      "createdAt": "2026-09-28T09:15:00.000Z",
+      "neededByDate": "2026-09-29",
+      "priority": "CRITICO",
+      "status": "PENDENTE",
+      "generalNotes": "Concretagem do trecho 2 do calçadão agendada para amanhã cedo. Se o cimento e a areia não chegarem, paralisamos 18 operários.",
+      "audioNote": "Fala Roberto, Raimundo aqui da Orla. Precisamos desse cimento urgente amanhecendo o dia aqui na Amaralina pra não perder a maré baixa.",
+      "items": [
+        {
+          "itemId": "mat-01",
+          "code": "MAT-CIM-01",
+          "name": "Cimento Portland CP-II F-32",
+          "category": "MATERIAL",
+          "unit": "sacos",
+          "quantityRequested": 100,
+          "quantityApproved": 100,
+          "status": "PENDENTE",
+          "itemNotes": "Descarregar no depósito coberto da Frente 1"
+        },
+        {
+          "itemId": "mat-02",
+          "code": "MAT-ARE-02",
+          "name": "Areia Média Lavada de Rio",
+          "category": "MATERIAL",
+          "unit": "m³",
+          "quantityRequested": 12,
+          "quantityApproved": 12,
+          "status": "PENDENTE",
+          "itemNotes": "A granel na baia 2"
+        },
+        {
+          "itemId": "fer-03",
+          "code": "FER-VIB-03",
+          "name": "Vibrador de Concreto Portátil c/ Mangote 35mm",
+          "category": "FERRAMENTAS",
+          "unit": "unidades",
+          "quantityRequested": 2,
+          "quantityApproved": 2,
+          "status": "PENDENTE",
+          "itemNotes": "Testar voltagem 220V antes do envio"
+        },
+        {
+          "itemId": "mao-01",
+          "code": "MAO-PED-01",
+          "name": "Pedreiro de Obras / Alvenaria",
+          "category": "HOMENS",
+          "unit": "homens (diárias)",
+          "quantityRequested": 4,
+          "quantityApproved": 4,
+          "status": "PENDENTE",
+          "itemNotes": "Para sarrafeamento e acabamento vassourado"
+        }
+      ],
+      "review": null,
+      "history": [
+        {
+          "timestamp": "2026-09-28T09:15:00.000Z",
+          "user": "Mestre Raimundo Nonato",
+          "action": "REQUERIMENTO_CRIADO",
+          "notes": "Requerimento aberto via smartphone no canteiro."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-0035",
+      "code": "REQ-0035",
+      "obraId": "obra-trobogy",
+      "obraName": "Macrodrenagem e Canal do Trobogy",
+      "sector": "Frente 1 - Escavação e Desassoreamento",
+      "requestedBy": {
+        "id": "usr-chefe-2",
+        "name": "Mestre Valdir Santos",
+        "role": "CHEFE_OBRA",
+        "phone": "(71) 98112-9933"
+      },
+      "createdAt": "2026-09-27T14:30:00.000Z",
+      "neededByDate": "2026-09-28",
+      "priority": "URGENTE",
+      "status": "APROVADO",
+      "generalNotes": "Abertura de nova vala para manilhamento próximo à ponte do Trobogy.",
+      "audioNote": "Engenheiro Roberto, autorize a retroescavadeira e a equipe de apoio pra amanhã.",
+      "items": [
+        {
+          "itemId": "maq-01",
+          "code": "MAQ-RET-01",
+          "name": "Retroescavadeira JCB 3CX 4x4",
+          "category": "MAQUINARIO",
+          "unit": "máquinas (diárias)",
+          "quantityRequested": 1,
+          "quantityApproved": 1,
+          "status": "APROVADO",
+          "itemNotes": "Operador Sérgio já alocado"
+        },
+        {
+          "itemId": "maq-03",
+          "code": "MAQ-CAM-03",
+          "name": "Caminhão Basculante Traçado 14m³ (Caçamba)",
+          "category": "MAQUINARIO",
+          "unit": "caminhões (diárias)",
+          "quantityRequested": 2,
+          "quantityApproved": 2,
+          "status": "APROVADO",
+          "itemNotes": "Bota-fora licenciado Conder"
+        },
+        {
+          "itemId": "mao-02",
+          "code": "MAO-SER-02",
+          "name": "Servente de Obras (Ajudante Geral)",
+          "category": "HOMENS",
+          "unit": "homens (diárias)",
+          "quantityRequested": 4,
+          "quantityApproved": 4,
+          "status": "APROVADO",
+          "itemNotes": "Para isolamento de pista e escoramento"
+        }
+      ],
+      "review": {
+        "reviewedBy": {
+          "id": "usr-eng-1",
+          "name": "Eng. Roberto Almeida",
+          "crea": "CREA-BA 48219/D"
+        },
+        "reviewedAt": "2026-09-27T16:05:00.000Z",
+        "decision": "APROVADO",
+        "engineerNotes": "Solicitação totalmente aprovada. A retroescavadeira JCB e os caminhões estão programados para sair da base de Lauro de Freitas às 06h30.",
+        "dispatchDate": "2026-09-28T07:00:00.000Z",
+        "warehouseSource": "Almoxarifado Central CBSM - Base Lauro de Freitas"
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-27T14:30:00.000Z",
+          "user": "Mestre Valdir Santos",
+          "action": "REQUERIMENTO_CRIADO",
+          "notes": "Aberto no canteiro Trobogy."
+        },
+        {
+          "timestamp": "2026-09-27T16:05:00.000Z",
+          "user": "Eng. Roberto Almeida",
+          "action": "REQUERIMENTO_APROVADO",
+          "notes": "Aprovado integralmente com despacho programado."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-0031",
+      "code": "REQ-0031",
+      "obraId": "obra-sete",
+      "obraName": "Requalificação Av. Sete de Setembro",
+      "sector": "Trecho 2 - Pavimentação em Pedra Portuguesa",
+      "requestedBy": {
+        "id": "usr-chefe-1",
+        "name": "Mestre Raimundo Nonato",
+        "role": "CHEFE_OBRA",
+        "phone": "(71) 98765-4321"
+      },
+      "createdAt": "2026-09-26T10:00:00.000Z",
+      "neededByDate": "2026-09-27",
+      "priority": "NORMAL",
+      "status": "APROVADO_PARCIAL",
+      "generalNotes": "Manutenção de calçamento em pedra portuguesa e requalificação de passeios.",
+      "audioNote": "",
+      "items": [
+        {
+          "itemId": "mat-01",
+          "code": "MAT-CIM-01",
+          "name": "Cimento Portland CP-II F-32",
+          "category": "MATERIAL",
+          "unit": "sacos",
+          "quantityRequested": 60,
+          "quantityApproved": 40,
+          "status": "AJUSTADO",
+          "itemNotes": "Ajustado para 40 sacos de acordo com estoque remanescente no local"
+        },
+        {
+          "itemId": "fer-02",
+          "code": "FER-SAP-02",
+          "name": "Compactador de Solo a Percussão (Sapo Mecânico)",
+          "category": "FERRAMENTAS",
+          "unit": "unidades",
+          "quantityRequested": 2,
+          "quantityApproved": 1,
+          "status": "AJUSTADO",
+          "itemNotes": "1 sapo mecânico é suficiente para a extensão atual"
+        }
+      ],
+      "review": {
+        "reviewedBy": {
+          "id": "usr-eng-1",
+          "name": "Eng. Roberto Almeida",
+          "crea": "CREA-BA 48219/D"
+        },
+        "reviewedAt": "2026-09-26T11:45:00.000Z",
+        "decision": "APROVADO_PARCIAL",
+        "engineerNotes": "Reduzida a cota de cimento para 40 sacos pois o relatório semanal apontou 22 sacos estocados no galpão auxiliar da Av. Sete.",
+        "dispatchDate": "2026-09-27T08:00:00.000Z",
+        "warehouseSource": "Almoxarifado Central CBSM"
+      },
+      "history": [
+        {
+          "timestamp": "2026-09-26T10:00:00.000Z",
+          "user": "Mestre Raimundo Nonato",
+          "action": "REQUERIMENTO_CRIADO",
+          "notes": "Criado no canteiro."
+        },
+        {
+          "timestamp": "2026-09-26T11:45:00.000Z",
+          "user": "Eng. Roberto Almeida",
+          "action": "APROVADO_PARCIAL",
+          "notes": "Quantidades recalculadas pelo engenheiro fiscal."
+        }
+      ]
+    }
+  ]
+}
